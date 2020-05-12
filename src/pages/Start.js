@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
+import Carousel from '~/components/Carousel'
+
 export default function Start(){
 
     return (
         <View style={styles.container}>
-
+            <Carousel />
         </View>
     )
 
@@ -13,7 +15,6 @@ export default function Start(){
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'red',
         flex: 1,
     },
 })
