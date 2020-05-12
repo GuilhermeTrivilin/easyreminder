@@ -3,12 +3,8 @@ import { View, StyleSheet, ScrollView, Dimensions, Animated, Text } from 'react-
 
 const { width } = Dimensions.get('window');
 
-const ads = [
+const screens = [
 	{ content: 'ANUNCIO 1' },
-	{ content: 'ANUNCIO 2' },
-	{ content: 'ANUNCIO 3' },
-	{ content: 'ANUNCIO 4' },
-	{ content: 'ANUNCIO 5' },
 ];
 
 export default class Carousel extends React.Component {
@@ -32,13 +28,13 @@ export default class Carousel extends React.Component {
 							{ useNativeDriver: false }
 						)}
 					>
-						{ads.map((item, i) => <View style={{flex: 1, width}}><Text>{item.content}</Text></View>)}
+						{screens.map((item, i) => <View style={{flex: 1, width}}><Text>{item.content}</Text></View>)}
 					</ScrollView>
 				</View>
 				<View
 					style={styles.rowView}
 				>
-					{ads.map((_, i) => {
+					{screens.map((_, i) => {
 						let opacity = position.interpolate({
 							inputRange: [i - 1, i, i + 1],
 							outputRange: [0.3, 1, 0.3],
