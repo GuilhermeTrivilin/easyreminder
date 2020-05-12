@@ -1,10 +1,15 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView, Dimensions, Animated, Text } from 'react-native';
 
+import First from '~/components/Carousel/screens/First'
+import { colors } from '~/commons';
+
 const { width } = Dimensions.get('window');
 
 const screens = [
-	{ content: 'ANUNCIO 1' },
+	{ component: <First /> },
+	{ component: <First /> },
+	{ component: <First /> },
 ];
 
 export default class Carousel extends React.Component {
@@ -28,7 +33,7 @@ export default class Carousel extends React.Component {
 							{ useNativeDriver: false }
 						)}
 					>
-						{screens.map((item, i) => <View style={{flex: 1, width}}><Text>{item.content}</Text></View>)}
+						{screens.map((item, index) => <>{item.component}</>)}
 					</ScrollView>
 				</View>
 				<View
@@ -54,13 +59,11 @@ export default class Carousel extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: 'transparent',
-		marginBottom: 10
+		backgroundColor: '#FFF',
 	},
 	scrollView: {
-        flex: 1
+		flex: 1,
 	},
 	rowView: {
 		flexDirection: 'row'
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
 	scrollIndicator: {
 		height: 10,
 		width: 10,
-		backgroundColor: 'gray',
+		backgroundColor: colors.red,
 		marginVertical: 8,
 		marginHorizontal: 3,
 		borderRadius: 5
