@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text, Image } from 'react-native'
+import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native'
 import { colors } from '~/commons'
 
 const path = {
@@ -25,6 +25,13 @@ const Third = () => {
                     <Text style={styles.redText}>contagem regressiva </Text>
                     <Text>dos dias que faltam para um evento ou entrega que você tem que fazer!</Text>
                 </Text>
+
+                <TouchableOpacity
+                    onPress={() => navigation.navite('Home')}
+                    style={styles.button}
+                >
+                    <Text style={[styles.redText, { fontSize: 18 }]}>COMEÇAR!</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -46,7 +53,7 @@ const styles = StyleSheet.create({
     },
     textView: {
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'space-around'
     },
     text: {
         lineHeight: 25,
@@ -56,6 +63,9 @@ const styles = StyleSheet.create({
         color: colors.red,
         fontWeight: 'bold'
     },
+    button: {
+        alignItems: 'center'
+    }
 })
 
 export default Third
