@@ -27,7 +27,7 @@ const Third = ({navigation}) => {
                 </Text>
 
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => navigation.navigate('Connected')}
                     style={styles.button}
                 >
                     <Text style={[styles.redText, { fontSize: 18 }]}>COMEÇAR!</Text>

@@ -14,7 +14,7 @@ export default function Preload({navigation}){
         const alreadyEntry = await isFirstEntry()
 
         if(alreadyEntry){
-            navigation.navigate('Home')
+            navigation.navigate('Connected')
         } else{
             navigation.navigate('FirstEntryHome')
         }
