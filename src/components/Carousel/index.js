@@ -3,6 +3,7 @@ import { View, StyleSheet, ScrollView, Dimensions, Animated, Text } from 'react-
 
 import First from '~/components/Carousel/screens/First'
 import Second from '~/components/Carousel/screens/Second'
+import Third from '~/components/Carousel/screens/Third'
 
 import { colors } from '~/commons';
 
@@ -11,7 +12,7 @@ const { width } = Dimensions.get('window');
 const screens = [
 	{ component: <First /> },
 	{ component: <Second /> },
-	{ component: <First /> },
+	{ component: <Third /> },
 ];
 
 export default class Carousel extends React.Component {
