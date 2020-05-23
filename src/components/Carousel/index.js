@@ -2,13 +2,15 @@ import React from 'react';
 import { View, StyleSheet, ScrollView, Dimensions, Animated, Text } from 'react-native';
 
 import First from '~/components/Carousel/screens/First'
+import Second from '~/components/Carousel/screens/Second'
+
 import { colors } from '~/commons';
 
 const { width } = Dimensions.get('window');
 
 const screens = [
 	{ component: <First /> },
-	{ component: <First /> },
+	{ component: <Second /> },
 	{ component: <First /> },
 ];
 
@@ -33,7 +35,12 @@ export default class Carousel extends React.Component {
 							{ useNativeDriver: false }
 						)}
 					>
-						{screens.map((item, index) => <>{item.component}</>)}
+						{screens.map((item, index) => <View 
+						style={styles.pageContainer}
+						key={index}
+						>
+							{item.component}
+						</View>)}
 					</ScrollView>
 				</View>
 				<View
@@ -75,5 +82,10 @@ const styles = StyleSheet.create({
 		marginVertical: 8,
 		marginHorizontal: 3,
 		borderRadius: 5
+	},
+	pageContainer: {
+		width: Dimensions.get('window').width,
+        backgroundColor: '#FFF',
+        paddingHorizontal: 20
 	}
 })
