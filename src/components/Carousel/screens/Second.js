@@ -21,9 +21,9 @@ const Second = () => {
             <View style={styles.textView}>
                 <Text style={styles.text}>
                     <Text>Nosso app te lembrará de todas as suas tarefas diárias por meio de </Text>
-                    <Text style={styles.redText}>notificações automáticas! </Text>
+                    <Text style={[styles.text, styles.redText]}>notificações automáticas! </Text>
                     <Text> Dessa forma você não precisa se preocupar em se lembrar de tudo, deixe a </Text>
-                    <Text style={styles.redText}>tecnologia </Text>
+                    <Text style={[styles.text, styles.redText]}>tecnologia </Text>
                     <Text>fazer isso por você!</Text>
                 </Text>
             </View>
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
     },
     text: {
         lineHeight: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: 17
     },
     redText: {
         color: colors.red,

@@ -6,7 +6,7 @@ const path = {
     alarm: require('~/assets/alarm.png')
 }
 
-const Third = () => {
+const Third = ({navigation}) => {
 
     return (
         <View style={styles.container}>
@@ -20,14 +20,14 @@ const Third = () => {
             <View style={styles.textView}>
                 <Text style={styles.text}>
                     <Text>Outra funcionalidade super útil é o nosso </Text>
-                    <Text style={styles.redText}>countdown! </Text>
+                    <Text style={[styles.text, styles.redText]}>countdown! </Text>
                     <Text>Que nada mais é do que uma funcionalidade que faz </Text>
-                    <Text style={styles.redText}>contagem regressiva </Text>
+                    <Text style={[styles.text, styles.redText]}>contagem regressiva </Text>
                     <Text>dos dias que faltam para um evento ou entrega que você tem que fazer!</Text>
                 </Text>
 
                 <TouchableOpacity
-                    onPress={() => navigation.navite('Home')}
+                    onPress={() => navigation.navigate('Home')}
                     style={styles.button}
                 >
                     <Text style={[styles.redText, { fontSize: 18 }]}>COMEÇAR!</Text>
@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
     },
     text: {
         lineHeight: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: 17
     },
     redText: {
         color: colors.red,

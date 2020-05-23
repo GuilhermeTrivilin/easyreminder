@@ -16,7 +16,7 @@ const First = () => {
                     style={styles.logo}
                 />
                 <Text style={styles.title}>
-                    <Text style={styles.redText}>Easy</Text>
+                    <Text style={[styles.text, styles.redText]}>Easy</Text>
                     <Text>Reminder</Text>
                 </Text>
             </View>
@@ -24,11 +24,11 @@ const First = () => {
             <View style={styles.textView}>
                 <Text style={styles.text}>
                     <Text>Este aplicativo é super </Text>
-                    <Text style={styles.redText}>simples e legal! </Text>
+                    <Text style={[styles.text, styles.redText]}>simples e legal! </Text>
                     <Text>A principal finalidade do app é te ajudar a </Text>
-                    <Text style={styles.redText}>organizar suas tarefas </Text>
+                    <Text style={[styles.text, styles.redText]}>organizar suas tarefas </Text>
                     <Text>do dia de forma </Text>
-                    <Text style={styles.redText}>simples e tecnológica! </Text>
+                    <Text style={[styles.text, styles.redText]}>simples e tecnológica! </Text>
                     <Text>Vamos lá, vou te explicar as duas principais finalidades de nosso app!</Text>
                 </Text>
             </View>
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     },
     text: {
         lineHeight: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: 17
     },
     redText: {
         color: colors.red,

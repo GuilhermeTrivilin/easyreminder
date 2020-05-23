@@ -3,11 +3,10 @@ import { View, StyleSheet } from 'react-native'
 
 import Carousel from '~/components/Carousel'
 
-export default function Start(){
-
+export default function Start({navigation}){
     return (
         <View style={styles.container}>
-            <Carousel />
+            <Carousel navigation={navigation} />
         </View>
     )
 

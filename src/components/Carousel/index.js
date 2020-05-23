@@ -9,18 +9,23 @@ import { colors } from '~/commons';
 
 const { width } = Dimensions.get('window');
 
-const screens = [
-	{ component: <First /> },
-	{ component: <Second /> },
-	{ component: <Third /> },
-];
 
 export default class Carousel extends React.Component {
-
+	
 	scrollX = new Animated.Value(0)
-
+	
 	render() {
+
+		const { navigation } = this.props
+
+		const screens = [
+			{ component: <First /> },
+			{ component: <Second /> },
+			{ component: <Third navigation={navigation} /> },
+		];
+
 		let position = Animated.divide(this.scrollX, width);
+
 		return (
 			<View style={styles.container}>
 				<View
