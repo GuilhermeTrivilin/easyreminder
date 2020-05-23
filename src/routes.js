@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Home from '~/pages/Main/Home'
-import Start from '~/pages/Start'
+import Start from '~/pages/FisrtEntry/Start'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
