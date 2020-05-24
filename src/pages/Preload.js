@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, ActivityIndicator, Image, Text } from 'react-native'
 
 import { colors } from '~/commons'
-import { isFirstEntry } from '~/helper/firstEntry'
+import { isFirstEntry } from '~/helpers/firstEntry'
 
 const path = {
     logo: require('~/assets/logo.png')

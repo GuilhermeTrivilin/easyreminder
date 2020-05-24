@@ -1,24 +1,39 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Modal, Button, Text, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Modal, Text } from 'react-native'
 
 import Input from '~/components/Input'
 import ColorPalette from 'react-native-color-palette'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import TransparentButton from '~/components/buttons/Transparent';
 
 import { colors } from '~/commons'
-import TransparentButton from '../buttons/Transparent';
+import { maskDate } from '~/helpers/formatDate'
 
 const AddCountdown = ({ closeModal, visible }) => {
 
     const [title, setTitle] = useState('')
-    const [date, setDate] = useState(new Date())
+    const [date, setDate] = useState('')
     const [days, setDays] = useState('')
     const [selectedColor, setSelectedColor] = useState('')
 
     const handleConfirm = (timeInDays) => {
-        const date = timeInDays * (8.64 ** 7)
+        if(!validateFields()) return
 
-        console.log(date)
+        console.log('teste')
+    }
+
+    const validateFields = () => {
+        if(title !== '' && selectedColor !== ''){
+            if(date !== '' || days !== ''){
+                return true
+            } else {
+                alert('Selecione a data ou a quantidade de dias!')
+                return false
+            }
+        } else {
+            alert('Preencha todos os campos.')
+            return false
+        }
     }
 
     FontAwesome.loadFont()
@@ -35,25 +50,29 @@ const AddCountdown = ({ closeModal, visible }) => {
 
                     <Input
                         placeholder='Título do Countdown'
-                        onChange={setTitle}
+                        onChangeText={setTitle}
                         value={title}
                     />
 
                     <View style={[styles.doubleView, { marginBottom: 15 }]}>
                         <Input
                             placeholder='Quantidade de dias'
-                            onChange={(number) => setDays(number)}
+                            onChangeText={setDays}
                             value={days}
                             keyboardType='numeric'
+                            width='45%'
                         />
 
                         <Text>ou</Text>
 
-                        <TouchableOpacity
-                            onPress={() => setDatePicker(true)}
-                        >
-                            <Text style={styles.redText}>SELECIONAR DATA</Text>
-                        </TouchableOpacity>
+                        <Input
+                            placeholder='Digite a data'
+                            onChangeText={setDate}
+                            value={maskDate(date)}
+                            keyboardType='numeric'
+                            width='45%'
+                            maxLength={10}
+                        />
                     </View>
 
                     <ColorPalette

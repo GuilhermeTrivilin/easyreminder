@@ -2,11 +2,11 @@ import React from 'react'
 import { TextInput, StyleSheet } from 'react-native'
 import { colors } from '~/commons'
 
-const Input = ({ ...props }) => {
+const Input = ({ width, ...props }) => {
 
     return (
         <TextInput
-            style={styles.container}
+            style={[styles.container, { width }]}
             {...props}
         />
     )
