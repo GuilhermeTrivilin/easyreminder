@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, StyleSheet, FlatList } from 'react-native'
 
-import CountdownActionButton from '~/components/ActionButton/Countdown'
 import AddCountdown from '~/components/modals/AddCountdown'
 import CountdownCard from '~/components/cards/Countdown'
 
@@ -31,10 +30,6 @@ export default function Countdown() {
 
 	return (
 		<View style={styles.container}>
-			<CountdownActionButton
-				command={() => setVisible(true)}
-			/>
-
 			{renderCountdownList}
 
 			<AddCountdown
