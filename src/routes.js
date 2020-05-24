@@ -40,7 +40,7 @@ const Connected = () => {
                 name='Countdown'
                 component={Countdown}
                 options={{
-                    tabBarLabel: 'Pesquisar',
+                    tabBarLabel: 'Countdown',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="restore-clock" color={color} size={25} />
                     ),
