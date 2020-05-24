@@ -53,7 +53,7 @@ const Connected = () => {
 export default function Routes() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Connected' screenOptions={{ headerShown: false }} >
+            <Stack.Navigator initialRouteName='Preload' screenOptions={{ headerShown: false }} >
                 <Stack.Screen name='Preload' component={Preload} />
                 <Stack.Screen name='FirstEntryHome' component={FirstEntryHome} />
                 <Stack.Screen name='FirstEntryStart' component={FirstEntryStart} />
