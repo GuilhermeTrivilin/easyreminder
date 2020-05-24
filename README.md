@@ -4,11 +4,11 @@ The development of this application was based on the simple fact that there are 
 
 ### Development tasklist
 
-- [x]  Basic project creation
-- [ ] Start screen
-- [ ] Countdown screen
+- [x] Basic project creation
+- [x] Start screen
+- [x] App presentation image carousel
+- [x] Countdown screen
 - [ ] Tasklist screen
-- [ ] Connection with Firebase
 - [ ] Push notifications system
 
 ### Operational systems
