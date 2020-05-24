@@ -24,11 +24,19 @@ const AddCountdown = ({ closeModal, visible }) => {
         if(days){
             timestamp = eval((days * 86400000) + new Date().getTime())
         } else{
-            timestamp = Date.parse(date)
+            timestamp = Date.parse(date.split('/').reverse().join('/'))
         }
         
-        await addCountdown({title, timestamp, selectedColor})
+        await addCountdown({title, timestamp, selectedColor, start: new Date().getTime()})
+        clearStates()
         closeModal()
+    }
+
+    const clearStates = () => {
+        setTitle('')
+        setDate('')
+        setDays('')
+        setSelectedColor('')
     }
 
     const validateFields = () => {

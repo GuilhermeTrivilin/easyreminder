@@ -15,3 +15,16 @@ export const getAllCountdown = async () => {
     return parsed || []
 
 }
+
+export const deleteCountdown = async (countdown) => {
+
+    const currentCountdownList = await getAllCountdown()
+    const newCountdownList = currentCountdownList.filter((item) => {
+        if(item.start === countdown.start) return
+
+        return item
+    })
+
+    await AsyncStorage.setItem('countdown-list', JSON.stringify(newCountdownList))
+
+}
