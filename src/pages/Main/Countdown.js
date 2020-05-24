@@ -1,12 +1,17 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, StyleSheet } from 'react-native'
 
 import CountdownActionButton from '~/components/ActionButton/Countdown'
 import AddCountdown from '~/components/Modal/AddCountdown'
+import { getAllCountdown } from '~/helpers/manageCountdown'
 
-export default function Countdown(){
+export default function Countdown() {
 
 	const [visible, setVisible] = useState(false)
+
+	useEffect(async() => {
+		console.log(await getAllCountdown())
+	}, [])
 
 	return (
 		<View style={styles.container}>

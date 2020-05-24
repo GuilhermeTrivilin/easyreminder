@@ -8,6 +8,7 @@ import TransparentButton from '~/components/buttons/Transparent';
 
 import { colors } from '~/commons'
 import { maskDate } from '~/helpers/formatDate'
+import { addCountdown } from '~/helpers/manageCountdown'
 
 const AddCountdown = ({ closeModal, visible }) => {
 
@@ -16,10 +17,18 @@ const AddCountdown = ({ closeModal, visible }) => {
     const [days, setDays] = useState('')
     const [selectedColor, setSelectedColor] = useState('')
 
-    const handleConfirm = (timeInDays) => {
+    const handleConfirm = async () => {
         if(!validateFields()) return
+        let timestamp = 0
 
-        console.log('teste')
+        if(days){
+            timestamp = eval((days * 86400000) + new Date().getTime())
+        } else{
+            timestamp = Date.parse(date)
+        }
+        
+        await addCountdown({title, timestamp, selectedColor})
+        closeModal()
     }
 
     const validateFields = () => {
