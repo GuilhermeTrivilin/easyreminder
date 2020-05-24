@@ -30,16 +30,24 @@ const CountdownCard = ({ item, deleteCommand }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
-            <ProgressCircle
-                percent={percent}
-                radius={40}
-                borderWidth={8}
-                color={selectedColor}
-                bgColor="#fff"
+            <Text
+                numberOfLines={2}
+                ellipsizeMode='tail'
+                style={styles.title}
             >
-                <Text style={{ fontSize: 18 }}>{daysRemaining.toFixed(0)}</Text>
-            </ProgressCircle>
+                {title}
+            </Text>
+            <View style={styles.progressCircle}>
+                <ProgressCircle
+                    percent={percent}
+                    radius={40}
+                    borderWidth={8}
+                    color={selectedColor}
+                    bgColor="#fff"
+                >
+                    <Text style={{ fontSize: 18 }}>{daysRemaining.toFixed(0)}</Text>
+                </ProgressCircle>
+            </View>
 
             <TouchableOpacity
                 style={styles.deleteButton}
@@ -62,12 +70,17 @@ const styles = StyleSheet.create({
         width: '40%',
         alignItems: 'center',
         borderRadius: 10,
-        margin: 5
+        margin: 5,
+        height: 180
     },
     title: {
         marginVertical: 5,
         fontWeight: 'bold',
-        fontSize: 15
+        fontSize: 15,
+        marginHorizontal: 10,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        flex: 0.4
     },
     deleteButton: {
         marginTop: 10,
@@ -78,6 +91,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
+        position: 'absolute',
+        bottom: 0
+    },
+    progressCircle: {
+        flex: 1,
+        marginVertical: 10
     }
 })
 
