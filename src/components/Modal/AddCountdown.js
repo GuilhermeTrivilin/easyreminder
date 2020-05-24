@@ -1,6 +1,9 @@
 import React from 'react'
 import { View, StyleSheet, Modal, Button, Text, TouchableOpacity } from 'react-native'
+
+
 import Input from '~/components/Input'
+
 import { colors } from '~/commons'
 
 const AddCountdown = ({ closeModal, visible }) => {
