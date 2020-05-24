@@ -2,27 +2,26 @@ import React, { useState } from 'react'
 import { View, StyleSheet, Modal, Button, Text, TouchableOpacity } from 'react-native'
 
 import Input from '~/components/Input'
-import DateTimePicker from '@react-native-community/datetimepicker';
+import ColorPalette from 'react-native-color-palette'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 import { colors } from '~/commons'
+import TransparentButton from '../buttons/Transparent';
 
 const AddCountdown = ({ closeModal, visible }) => {
 
-    const [datePicker, setDatePicker] = useState(false)
+    const [title, setTitle] = useState('')
     const [date, setDate] = useState(new Date())
     const [days, setDays] = useState('')
-
-    const renderDatePicker = datePicker && <DateTimePicker
-        value={date}
-        onChange={(date) => setDate(date.nativeEvent.timestamp)}
-        mode='date'
-    />
+    const [selectedColor, setSelectedColor] = useState('')
 
     const handleConfirm = (timeInDays) => {
         const date = timeInDays * (8.64 ** 7)
 
         console.log(date)
     }
+
+    FontAwesome.loadFont()
 
     return (
         <Modal
@@ -36,9 +35,11 @@ const AddCountdown = ({ closeModal, visible }) => {
 
                     <Input
                         placeholder='Título do Countdown'
+                        onChange={setTitle}
+                        value={title}
                     />
 
-                    <View style={styles.doubleInput}>
+                    <View style={[styles.doubleView, { marginBottom: 15 }]}>
                         <Input
                             placeholder='Quantidade de dias'
                             onChange={(number) => setDays(number)}
@@ -55,15 +56,34 @@ const AddCountdown = ({ closeModal, visible }) => {
                         </TouchableOpacity>
                     </View>
 
-                    <Text style={styles.text}>Selecione a cor desejada:</Text>
+                    <ColorPalette
+                        onChange={setSelectedColor}
+                        value={selectedColor}
+                        colors={['#C0392B', '#E74C3C', '#9B59B6', '#8E44AD', '#2980B9']}
+                        titleStyles={{ fontSize: 15 }}
+                        title='Selecione a cor da barra de progresso: '
+                        icon={
+                            <FontAwesome name='check-circle-o' size={25} color='white' />
+                        }
+                    />
 
+                    <View style={styles.doubleView}>
+                        <TransparentButton
+                            text="CANCELAR"
+                            color={colors.red}
+                            width='45%'
+                            command={closeModal}
+                        />
+                        <TransparentButton
+                            text="CONFIRMAR"
+                            color={colors.green}
+                            width='45%'
+                            command={handleConfirm}
+                        />
+                    </View>
 
-                    <Button title='fechar' onPress={closeModal} />
                 </View>
             </View>
-
-            {renderDatePicker}
-
         </Modal>
     )
 }
@@ -85,15 +105,11 @@ const styles = StyleSheet.create({
         color: colors.red,
         textAlign: 'center',
     },
-    doubleInput: {
+    doubleView: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
-    text: {
-        marginVertical: 15,
-        fontSize: 15
-    }
 })
 
 export default AddCountdown
