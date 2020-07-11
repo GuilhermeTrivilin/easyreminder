@@ -1,6 +1,8 @@
 # Easy Reminder
 
-![easyreminder-logo]('https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/logo/to/img.png')
+![easyreminder-logo]('https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/logo.png')
+
+![easyreminder-logo]('https://github.com/GuilhermeTrivilin/easyreminder/blob/develop/src/assets/logo.png')
 
 O desenvolvimento deste aplicativo foi baseado no simples fato de que não existem aplicativos simples que forneçam ao usuário um sistema de contagem regressiva para celulares iOS e Android.
 
