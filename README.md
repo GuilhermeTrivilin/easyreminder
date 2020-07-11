@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/logo.png" />
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/readme-images/logo.png" />
     <p align="center" style="font-size: 30px; margin-top: 5px">Easy<b style="color: #FB5252">Reminder.</b></p>
 </p>
 
@@ -10,15 +10,15 @@ Além disso, desenvolvi este aplicativo para uso pessoal como forma de lembrete 
 ### Prints reais da aplicação
 
 <div style="width: 250px; margin: 50px auto">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/1.png" />
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/readme-images/1.png" />
 </div>
 
 <div style="width: 250px; margin: 50px auto">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/2.png" />
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/readme-images/2.png" />
 </div>
 
 <div style="width: 250px; margin: 50px auto">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/3.png" />
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/readme-images/3.png" />
 </div>
 
 ### Tasklist de desenvolvimento
