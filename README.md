@@ -1,6 +1,6 @@
 # Easy Reminder
 
-![easyreminder-logo]('https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/master/src/assets/logo.png')
+![easyreminder-logo]('https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/logo.png')
 
 ![easyreminder-logo]('https://github.com/GuilhermeTrivilin/easyreminder/blob/develop/src/assets/logo.png')
 
