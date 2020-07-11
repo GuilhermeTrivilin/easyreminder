@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/logo.png =250x" />
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/logo.png" />
     <p align="center" style="font-size: 30px; margin-top: 5px">Easy<b style="color: #FB5252">Reminder.</b></p>
 </p>
 
