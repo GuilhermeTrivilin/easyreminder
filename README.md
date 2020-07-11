@@ -10,7 +10,15 @@ Além disso, desenvolvi este aplicativo para uso pessoal como forma de lembrete 
 ### Prints reais da aplicação
 
 <div style="width: 250px; margin: 50px auto">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/teste.png" />
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/1.png" />
+</div>
+
+<div style="width: 250px; margin: 50px auto">
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/2.png" />
+</div>
+
+<div style="width: 250px; margin: 50px auto">
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/readme-images/3.png" />
 </div>
 
 ### Tasklist de desenvolvimento
