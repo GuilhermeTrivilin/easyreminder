@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, StyleSheet, ScrollView } from 'react-native'
+import { View, StyleSheet, ScrollView, SafeAreaView } from 'react-native'
 
 import AddCountdown from '~/components/modals/AddCountdown'
 import CountdownCard from '~/components/cards/Countdown'
@@ -30,7 +30,7 @@ export default function Countdown() {
 	const removeCountdown = async (item) => {
 		await deleteCountdown(item)
 		getCountdownList()
-	} 
+	}
 
 	const renderCountdownList = countdownList !== '' && <ScrollView
 	>
@@ -45,20 +45,22 @@ export default function Countdown() {
 	</ScrollView>
 
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={{flex: 1}}>
+			<View style={styles.container}>
 
-			{renderCountdownList}
+				{renderCountdownList}
 
-			<AddCountdown
-				visible={visible}
-				closeModal={() => closeModal()}
-			/>
+				<AddCountdown
+					visible={visible}
+					closeModal={() => closeModal()}
+				/>
 
-			<FabButton
-				color={colors.red}
-				command={() => setVisible(true)}
-			/>
-		</View>
+				<FabButton
+					color={colors.red}
+					command={() => setVisible(true)}
+				/>
+			</View>
+		</SafeAreaView>
 	)
 
 }
