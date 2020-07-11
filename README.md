@@ -1,7 +1,7 @@
-<div style="width: 250px; margin: 50px auto">
-    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/logo.png" />
+<p align="center">
+    <img src="https://raw.githubusercontent.com/GuilhermeTrivilin/easyreminder/develop/src/assets/logo.png =250x" />
     <p align="center" style="font-size: 30px; margin-top: 5px">Easy<b style="color: #FB5252">Reminder.</b></p>
-</div>
+</p>
 
 O desenvolvimento deste aplicativo foi baseado no simples fato de que não existem aplicativos simples que forneçam ao usuário um sistema de contagem regressiva para celulares iOS e Android.
 
