@@ -37,6 +37,6 @@ A aplicação foi desenvolvida para ambas as palaformas, **Android** e **iOS**, 
 
 **Guilherme Trivilin** - Mobile Developer
 
-**LinkedIn** - https://www.linkedin.com/in/guilherme-pimentel-trivilin-a443ba163/
-**GitHub** - https://github.com/GuilhermeTrivilin
-**Email** - trivilin.dev@hotmail.com
+LinkedIn - [https://www.linkedin.com/in/guilherme-pimentel-trivilin-a443ba163/](https://www.linkedin.com/in/guilherme-pimentel-trivilin-a443ba163/) <br>
+GitHub - [https://github.com/GuilhermeTrivilin](https://github.com/GuilhermeTrivilin) <br>
+Email - trivilin.dev@hotmail.com
